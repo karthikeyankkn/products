@@ -19,7 +19,7 @@ exports.createProduct = async (req, res) => {
 
 // ==> Método responsável por listar todos os 'Products':
 exports.listAllProducts = async (req, res) => {
-  const response = await db.query('SELECT * FROM products ORDER BY productname ASC');
+  const response = await db.query('SELECT * FROM products ORDER BY productid DESC');
   res.status(200).send(response.rows);
 };
 
